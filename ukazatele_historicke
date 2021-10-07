@@ -27,3 +27,4 @@ let // klicove slovo uvozujici zacatek prikazu
         }
     )
 in
+    #"tabulka zemi"
