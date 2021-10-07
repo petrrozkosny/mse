@@ -1,0 +1,1 @@
+pocet vyskytu:=COUNTX(FILTER(data;data[Pocet obyvatel] <= MAX([Hranice]));data[Pocet obyvatel])
