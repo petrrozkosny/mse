@@ -1,0 +1,43 @@
+Do nového Excel dokumentu nahrajte dotazy z Github:
+prumerne_veky
+ukazatele_historicke
+ukazatele_nove
+
+spojte pod sebe do noveho dotazu pod sebe ukazatele_historicke a ukazatele_nove
+novy dotaz pojmenujte "data"
+do "data" připojte prumerny vek z prumerne_veky
+upravte datove typy
+
+vytvorte ciselniky pro
+dim zeme
+dim roky
+
+do datoveho modelu nahrajte dotazy
+dim zeme
+dim roky
+data
+
+ostatni dotazy upravte tak, ze budou v v rezimu jenom pripojeni"
+
+vytvorte relace mezi dotazy
+dim zeme - data
+dim roky - data
+
+vytvorte kontingencni tabulku a do ni dosadte na radky sloupec dim roky[Rok],
+do hodnot dosadte (nejdriv spocitejte) miry:
+- max populace v danem roce
+- max populace v danem roce pro polsko 
+- max populace ve vsech letech
+- max populace v predchozim roce
+- rozdil mezi max populace v danem roce a max populace v predchozim roce
+
+
+BONUS:
+- rozdil max populace polsko v danem roce a max populace polsko ve vsech letech
+- maximalni rok maximalni populace (napric vsemi roky), tj. pokud se stejna maximalni hodnota objevila
+vicekrat, zajima nas, ve kterem roce se objevila naposledy
+- pocet zemi (hodnot), ktere v danem roce meli populaci vetsi 10 000 000
+
+
+
+Do 16:30 - 16:40
