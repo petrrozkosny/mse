@@ -19,3 +19,11 @@ MINX(FILTER(data;data[Rok] = MAX(data[Rok]));data[Pocet obyvatel])))
 
 prumer vsechny roky zeme:=AVERAGEX(
 FILTER(ALL(data);data[Zeme] = VALUES(data[Zeme]));data[Pocet obyvatel])
+
+
+
+
+porovnani populace slicer:=SUM(data[Pocet obyvatel])
+-
+SUMX(
+FILTER(ALL(data);data[Rok] = MAX(data[Rok]) - MAX('pocet let zpet'[pocet let zpet]));data[Pocet obyvatel])
