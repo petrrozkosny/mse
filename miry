@@ -64,8 +64,7 @@ data[Rok]= MAX(data[Rok]) - MAX('pocet let zpet'[pocet let zpet])
 =CUBEVALUE("ThisWorkbookDataModel";"[Measures].[min_srazky]";"[data].[Rok].[All].["&A51&"]")
 
 
-
-
-
-
 rok max srazek:=MAXX(FILTER('dim roky';'dim roky'[Suma srazek]= max('dim roky'[Suma srazek]));'dim roky'[Rok])
+
+
+prumer dennich srazek max rok:=AVERAGEX(FILTER(data;data[Rok]=[rok max srazek]);data[PRCP])
