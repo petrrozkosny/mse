@@ -27,3 +27,15 @@ porovnani populace slicer:=SUM(data[Pocet obyvatel])
 -
 SUMX(
 FILTER(ALL(data);data[Rok] = MAX(data[Rok]) - MAX('pocet let zpet'[pocet let zpet]));data[Pocet obyvatel])
+
+
+
+srazky mezirocne:=IFERROR(
+SUM(data[PRCP])
+-
+SUMX(FILTER(ALL(data);data[Rok] 
+
+= MAX(data[Rok])-1
+&&data[NAME] = VALUES(data[NAME])
+
+);data[PRCP]);BLANK())
