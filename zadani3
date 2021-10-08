@@ -1,0 +1,54 @@
+Nový dokument
+Nahrát csv, které máme z github
+
+vytvořit dotazy:
+- data (data z csv, upravit datové typy, žádné sloupce nemazat)
+- dim name (tj. číselník hodnot ze sloupce name)
+- dim roky (tj. číselník hodnot ze sloupce rok, který si potřebujeme
+vypočítat
+
+Výše uvedené nahrát do datového modelu..
+
+Vytvořit kontingenční tabulku a do ní dosadit
+- rok
+- sumu srážek v daném roce
+- sumu srážek v daném roce - suma srážek v maximálním roce
+- suma srážek v daném roce pro "MOSNOV"
+
+Do tabulky "dim rok" dopočítat sloupec
+- suma srážek v daném roce
+- maximální srážky v daném roce
+
+Vytvořit kontingenční graf a vizualizovat:
+- mesic (dopočítat)
+- průměr srážek v daném měsíci (napříč roky)
+- průměr srážek v daném měsíci v max roce
+
+Vytvořit kontingenční graf a vizualizovat
+- mesic
+- průměr denních srážek v daném měsíci napříč roky 
+- průměr dennních srážek v roce maximálních srážek
+
+Vytvořte kontingenční graf a vizualizujte
+- rok
+- minimální srážky v daném roce
+- maximální srážky v daném roce
+
+Vytvořte kontingenční graf a vizualizujte
+- rok
+- minimální srážky v daném roce
+- minimální srážky napříč roky
+
+
+BONUS
+- do tabulky dim roky dopočítat
+- NAME s maximálními denními srážkami v daném roce
+- poslední datum z maximálními srážkami v daném roce
+
+BONUS 2
+
+Uživatel by si přál mít  kontingenční graf a v něm mít možnost přepínat
+- sumu, průměr či maximální srážky v daném roce (uživatel bude pokaždé potřebovat něco jiného)
+- sumu, průměr či maximální srážky v posledním roce napříč všemi roky
+
+
