@@ -1,0 +1,31 @@
+https://github.com/petrrozkosny/mse
+Vytvořte kontingenční tabulku, a do hodnot spočítejte (tj. na řádcích a sloupcích nebude nic)
+- maximální hodnotu ze sloupce [Pocet obyvatel]
+- maximální hodnotu ze sloupce [Pocet obyvatel] pro zeme = [Polsko]
+- maximální hodnotu ze sloupce [Pocet obyvatel] pro zeme = [Polsko] v max [Rok]
+- pokud je max. ze sloupce [Pocet obyvatel] v max roce pro Polsko menší než maximální hodnota [Pocet obyvatel]
+	pro Polsko v roce předcházejícím max roku, vypište "pokles", jinak "nárůst"
+- vypište první neprázdnou hodnotu ze sloupce [Zeme], pro zemi s nejnižší hodnotou ve sloupci [Pocet obyvatel]
+ v maximálním roce.
+Vytvořte kombinovaný kontingenční graf a do něj dosaďte
+- průřez nad sloupcem [Zeme]
+- na osu sloupec [Rokl]
+- do hodnot:
+	- průměr ze sloupce [Pocet obyvatel] pro danou [Zeme] a daný [Rok]
+	- průměr ze sloupce [Pocet obyvatel] pro danou [Zeme] napříč [Rok] 
+	(spočítejte jako kalkulovanou míru,
+	upravte osu tak, že se bude jednat o vedlejší osu)
+BONUS:
+Vytvořte si vlastní tabulku s hodnotami:
+1
+2
+3
+(tj. tři hodnoty typu celé číslo)
+Tuto tabulku pojmenujte jako "pocet let zpet
+Vytvořte kontingenční tabulku a dosaďte:
+- řádky: [Rok]
+- hodnoty:
+	suma [Pocet obyvatel] za daný rok
+	suma pocet obyvatel za daný rok - suma pocet obyvatel za počet let zpět, které si uživatel
+	zadal v průřezu (hodnoty z tabulku pocet let zpet dejte do průřezu tak, aby si uživatel mohl vybírat
+	hodnoty)
