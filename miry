@@ -68,3 +68,11 @@ rok max srazek:=MAXX(FILTER('dim roky';'dim roky'[Suma srazek]= max('dim roky'[S
 
 
 prumer dennich srazek max rok:=AVERAGEX(FILTER(data;data[Rok]=[rok max srazek]);data[PRCP])
+
+
+
+=
+CALCULATE(
+FIRSTNONBLANK(data[NAME];data[NAME]);
+FILTER(data;data[PRCP] = EARLIER([Maximalni srazky v roce])
+&&data[Rok] = EARLIER('dim roky'[Rok])))
