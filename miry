@@ -49,3 +49,11 @@ ALL(data);
 data[Rok] = MAX(data[Rok])
 &&data[NAME] = VALUES(data[NAME])
 &&data[Mesic] <=MAX(data[Mesic]));data[PRCP])
+
+
+
+
+srazky minule obdobi:=IFERROR(SUMX(
+FILTER(ALL(data);
+data[Rok]= MAX(data[Rok]) - MAX('pocet let zpet'[pocet let zpet])
+&&data[NAME] = VALUES(data[NAME]));data[PRCP]);BLANK())
