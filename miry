@@ -39,3 +39,13 @@ SUMX(FILTER(ALL(data);data[Rok]
 &&data[NAME] = VALUES(data[NAME])
 
 );data[PRCP]);BLANK())
+
+
+
+
+srazky kumulativne:=SUMX(
+FILTER(
+ALL(data);
+data[Rok] = MAX(data[Rok])
+&&data[NAME] = VALUES(data[NAME])
+&&data[Mesic] <=MAX(data[Mesic]));data[PRCP])
