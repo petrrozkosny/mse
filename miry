@@ -57,3 +57,8 @@ srazky minule obdobi:=IFERROR(SUMX(
 FILTER(ALL(data);
 data[Rok]= MAX(data[Rok]) - MAX('pocet let zpet'[pocet let zpet])
 &&data[NAME] = VALUES(data[NAME]));data[PRCP]);BLANK())
+
+
+
+
+=CUBEVALUE("ThisWorkbookDataModel";"[Measures].[min_srazky]";"[data].[Rok].[All].["&A51&"]")
