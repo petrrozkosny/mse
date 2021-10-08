@@ -76,3 +76,7 @@ CALCULATE(
 FIRSTNONBLANK(data[NAME];data[NAME]);
 FILTER(data;data[PRCP] = EARLIER([Maximalni srazky v roce])
 &&data[Rok] = EARLIER('dim roky'[Rok])))
+
+
+
+=MAXX(FILTER(data;data[PRCP]=EARLIER('dim roky'[Maximalni srazky v roce])&&data[Rok] = EARLIER('dim roky'[Rok]));data[DATE])
