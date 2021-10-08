@@ -1,0 +1,13 @@
+let
+    Zdroj = Csv.Document(File.Contents(cesta_souboru&"data.csv"),[Delimiter=";", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Záhlaví se zvýšenou úrovní" = Table.PromoteHeaders(Zdroj, [PromoteAllScalars=true]),
+    #"Změněný typ" = Table.TransformColumnTypes(#"Záhlaví se zvýšenou úrovní",{{"STATION", type text}, {"NAME", type text}, {"DATE", type date}, {"PRCP", type text}, {"SNWD", type text}, {"TAVG", type text}, {"TMAX", type text}, {"TMIN", type text}}),
+    #"Nahrazená hodnota" = Table.ReplaceValue(#"Změněný typ",".",",",Replacer.ReplaceText,{"PRCP"}),
+    #"Změněný typ1" = Table.TransformColumnTypes(#"Nahrazená hodnota",{{"PRCP", type number}}),
+    #"Odebrané ostatní sloupce" = Table.SelectColumns(#"Změněný typ1",{"NAME", "DATE", "PRCP"}),
+    #"Přejmenované sloupce" = Table.RenameColumns(#"Odebrané ostatní sloupce",{{"NAME", "NAME"}}),
+    filtr = try Table.SelectRows(#"Přejmenované sloupce", each ([JMENO] = "GRAZ")),
+    prejmenovani =  Table.RenameColumns(#"Přejmenované sloupce",{{"NAME", "JMENO"}}),
+    kontrola = if filtr[HasError] then  #"Odebrané ostatní sloupce"  else prejmenovani
+in
+    kontrola
