@@ -13,3 +13,9 @@ MAXX(FILTER(data;data[Zeme]="Polsko"&&data[Rok] = MAX(data[Rok])-1);data[Pocet o
 zeme min populace max rok:=CALCULATE(
 FIRSTNONBLANK(data[Zeme];data[Zeme]);FILTER(data;data[Pocet obyvatel] =
 MINX(FILTER(data;data[Rok] = MAX(data[Rok]));data[Pocet obyvatel])))
+
+
+
+
+prumer vsechny roky zeme:=AVERAGEX(
+FILTER(ALL(data);data[Zeme] = VALUES(data[Zeme]));data[Pocet obyvatel])
